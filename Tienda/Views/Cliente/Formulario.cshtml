@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Formulario";
+}
+<fieldset>
+<legend> Ingresar vacas</legend>
+    @using (@Html.BeginForm("Guarda", "Cliente", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <div class="form-group">
+        <span class="col-md-2">
+            Rut
+        </span>
+        <span class="col-md-6">
+            @Html.TextBox("rut", null, new { @class = "form-control", placeholder = "Ingrese Rut" })
+        </span>
+    </div>
+    <div class="form-group">
+        <span class="col-md-2">
+            Nombre del Cliente
+        </span>
+        <span class="col-md-6">
+            @Html.TextBox("nombrecliente", null, new { @class = "form-control", placeholder = "Ingrese nombre del cliente" })
+        </span>
+    </div>
+    <div class="form-group">
+        <span class="col-md-2">
+            Apellido
+        </span>
+        <span class="col-md-6">
+            @Html.TextBox("apellido", null, new { @class = "form-control", placeholder = "Ingrese Apellido" })
+        </span>
+    </div>
+    <div class="form-group">
+        <span class="col-md-2">
+            Direccion
+        </span>
+        <span class="col-md-6">
+            @Html.TextBox("direccion", null, new { @class = "form-control", placeholder = "Ingrese Direccion" })
+        </span>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon"><span class="glyphicon glyphicon-align-justify"></span></div>
+            <span class="col-md-6">
+                @Html.DropDownList("tipo", new List<SelectListItem>
+                {
+                    new SelectListItem{Text="Ingrese Tipo de Pafgo", Value=" - "},
+                    new SelectListItem{Text="Contado", Value="Contado"},
+                    new SelectListItem{Text="Efectivo", Value="Efectivo"},
+                    new SelectListItem{Text="Credito", Value="Credito"},
+                    new SelectListItem{Text="Documentado", Value="Documentado"}
+
+                },
+                new { @class = "form-control" }
+                )
+            </span>
+        </div>
+    </div>
+    <div class="form-control">
+        <button type="reset" class="btn btn-info">Limpiar</button>
+        <button type="submit" class="btn btn-primary">Guarda</button>
+    </div>
+
+  }
+</fieldset>

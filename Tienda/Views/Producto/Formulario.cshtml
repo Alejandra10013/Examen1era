@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Formulario";
+}
+<fieldset>
+    <legend> Ingreso de Productosd</legend>
+    @using (@Html.BeginForm("Guardar", "Producto", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            <span class="col-md-2">
+                Nombre
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("nombreproducto", null, new { @class = "form-control", placeholder = "Ingrese el nombre del Producto" })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Codigo de Barras
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("codigobarra", null, new { @class = "form-control", placeholder = "Ingresde Cogifo de Barras" })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Familia
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("familia", null, new { @class = "form-control", placeholder = "Ingrese familia del producto" })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Precio
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("precio", null, new { @class = "form-control", placeholder = "Ingrese Precio" })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Descuento
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("descuento", null, new { @class = "form-control", placeholder = "Ingrese Descuento" })
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-md-2">
+                Descripcion
+            </span>
+            <span class="col-md-6">
+                @Html.TextBox("descripcion", null, new { @class = "form-control", placeholder = "Ingrese Descripcion" })
+            </span>
+        </div>
+        <div class="form-control">
+            <button type="reset" class="btn btn-info">Limpiar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+    }
+</fieldset>

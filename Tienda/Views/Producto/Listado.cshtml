@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Tienda.Models.Productos>
+@{
+    ViewData["Title"] = "Listado";
+}
+<h2>Listado Productos</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+    <th>Id</th>
+    <th>Nombre</th>
+    <th>Codigo de Barras</th>
+    <th>Familia</th>
+    <th>Precio</th>
+    <th>Descuento</th>
+    <th>Descripcion</th>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => p.Id)</td>
+                <td>@Html.DisplayFor(m => p.NombreProd)</td>
+                <td>@Html.DisplayFor(m => p.CodigoBarra)</td>
+                <td>@Html.DisplayFor(m => p.Familia)</td>
+                <td>@Html.DisplayFor(m => p.Precio)</td>
+                <td>@Html.DisplayFor(m => p.Descuento)</td>
+                <td>@Html.DisplayFor(m => p.Descripcion)</td>
+                <td>@Html.ActionLink("Visualizar", "Ficha", new { Id = p.Id})</td>
+            </tr>
+        }
+    </tbody>
+</table>

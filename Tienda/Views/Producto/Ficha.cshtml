@@ -1,0 +1,50 @@
+﻿@model Tienda.Models.Productos
+
+<h2>Ficha productos</h2>
+
+<fieldset class="form-horizontal">
+
+    <legend class="label">Informacion de los Productos</legend>
+    <label class="control-label">ID</label>
+
+    <div class="form-group">
+        <div class="text-muted">@Html.DisplayFor(m => m.Id)</div>
+    </div>
+
+    <label class="control-label">Nombre del Producto</label>
+
+    <div class="form-group">
+        <div class="text-muted">@Html.DisplayFor(m => m.NombreProd)</div>
+    </div>
+
+    <label class="control-label">Codigo de Barras</label>
+
+    <div class="form-group">
+        <div class="text-muted">@Html.DisplayFor(m => m.CodigoBarra)</div>
+    </div>
+
+    <label class="control-label">Familia</label>
+
+    <div class="form-group">
+        <div class="text-muted">@Html.DisplayFor(m => m.Familia)</div>
+    </div>
+
+    <label class="control-label">Precio</label>
+
+    <div class="form-group">
+        <div class="text-muted">@Html.DisplayFor(m => m.Precio)</div>
+    </div>
+
+    <label class="control-label">Descuento</label>
+
+    <div class="form-group">
+        <div class="text-muted">@Html.DisplayFor(m => m.Descuento)</div>
+    </div>
+
+    <label class="control-label">Descripcion</label>
+
+    <div class="form-group">
+        <div class="text-muted">@Html.DisplayFor(m => m.Descripcion)</div>
+    </div>
+
+</fieldset>
